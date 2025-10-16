@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048_game</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+
+      <header>
+        <h1>2048</h1>
+
+        <div class="container_buttons">
+          <div class="block counter">
+            <h4>СЧЕТ</h4>
+            <span>0</span>
+          </div>
+          <div class="block better">
+            <h4>ЛУЧШИЙ</h4>
+            <span>0</span>
+          </div>
+          <button class="block">
+            Новая игра
+          </button>
+        </div>
+
+      </header>
+
+      <div class="container-game">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+          </div>
+        </div>
+
+        <!-- Создать элемент tile -->
+          <div class="game_tiles">
+
+          </div>
+      </div>
+
+
+      <div class="rules">
+        <h2>КАК ИГРАТЬ</h2>
+        <p class="game-explanation"></p>Используйте клавиши ваши <strong>стрелками</strong>, чтобы переместить плитки.<br> Когда два плитки с тем же номером ощупь, они <strong>слияния в один!</strong></p>
+      </div>
+      </div>
+
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
