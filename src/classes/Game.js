@@ -1,5 +1,27 @@
+import Tile from "./Tile.js"
+
 export default class Game {
-	generateStyleSheet() {}
+
+	constructor(){
+		this.tileSize = 100
+		this.tileCount = 4
+		// пока не нужны
+
+		this.score = 0
+		this.bestScore = 0
+		
+		this.tiles =[
+			[null, null, null, null],
+			[null, null, null, null],
+			[null, null, null, null],
+			[null, null, null, null],
+		]
+	}
+
+	generateStyleSheet() {
+
+	 }
+
 	newGame() {
 		this.tiles = [
 			[null, null, null, null],
@@ -40,10 +62,24 @@ export default class Game {
 		return emptyCoords;
 	}
 
-	moveLeft() {}
-	moveRight() {}
-	moveUp() {}
-	moveDown() {}
+	moveLeft() {
+		for (let i = 0; y < this.tiles.length; y++) {
+			if (this.tiles[y][x]) {
+				this.tiles[y][0] = this.thiles[y][x]
+				this.tiles[y][x] = null
+			}
+		}
+	}
+	moveRight() {
+		for (let i = 0; y < this.tiles.length; y++) {
+			if (this.tiles[y][x]) {
+				this.tiles[y][x] = this.thiles[y][x]
+				this.tiles[y][0] = null
+			}
+		}
+	}
+	moveUp() { }
+	moveDown() { }
 }
 
-const game = new Game();
+

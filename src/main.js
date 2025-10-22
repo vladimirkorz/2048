@@ -1,2 +1,2 @@
 import "./style.css";
-import start from "./classes/gameRander.js";
+import start from "./classes/gameRender.js";
