@@ -1,96 +1,201 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+	color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+	filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+	filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
 .card {
-  padding: 2em;
+	padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+	color: #888;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+	border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
+/* My stiles */
+h4 {
+	margin: 0;
+}
+
+.container {
+	background-color: #7f7f7f;
+	border-radius: 30px;
+	margin: auto;
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+}
+
+header {
+	/* width: 600px; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/* margin: 0 50px; */
+}
+.container_buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	height: 50px;
+}
+
+.block {
+	background-color: #1a1a1a;
+	padding: 10px 15px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	height: 100%;
+}
+
+.container-game {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.grid-container {
+	width: 430px;
+	display: grid;
+	grid-template-rows: repeat(4, 100px);
+	gap: 10px;
+	padding: 10px;
+	background-color: #1a1a1a;
+	border-radius: 15px;
+	position: relative;
+}
+
+.grid-row {
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	gap: 10px;
+}
+
+.item {
+	height: 100px;
+	width: 100px;
+	background-color: #383838;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.item > span {
+	color: #1a1a1a;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.game_tiles {
+	position: absolute;
+}
+
+.tile_block {
+	height: 100px;
+	width: 100px;
+	background-color: #1a1a1a;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tile_block > span {
+	color: #7f7f7f;
+	font-size: 30px;
+	font-weight: bold;
 }

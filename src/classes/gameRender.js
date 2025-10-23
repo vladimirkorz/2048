@@ -1,6 +1,5 @@
 import Game from "./Game";
 
-
 const gameTiles = document.querySelector(".game_tiles");
 const newGame = document.querySelector(".newGame");
 const best = document.querySelector(".best");
@@ -36,15 +35,13 @@ export default function start() {
 
 	newGame.addEventListener("click", () => {
 		game.newGame();
-		render(game)
+		render(game);
 	});
 
-	window.addEventListener("keydown", (e)=>{
-		if (e.code == "KeyA"){
-			game.moveLeft()
-			render(game)
+	window.addEventListener("keydown", (e) => {
+		if (e.code == "KeyA") {
+			game.moveLeft();
+			render(game);
 		}
-	})
+	});
 }
-
-	
