@@ -182,6 +182,10 @@ header {
 
 .game_tiles {
 	position: absolute;
+	
+	height: 450px;
+	width: 450px;
+	
 }
 
 .tile_block {

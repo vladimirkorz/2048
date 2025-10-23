@@ -5,15 +5,18 @@ const newGame = document.querySelector(".newGame");
 const best = document.querySelector(".best");
 const current = document.querySelector(".current");
 
-function render() {
-	for (let y = 0; x < game.tiles.length; y++) {
+function render(game) {
+	gameTiles.innerHTML = "";
+	current.innerHTML = `${game.score}`;
+
+	for (let y = 0; y < game.tiles.length; y++) {
 		for (let x = 0; x < game.tiles[y].length; x++) {
 			if (!game.tiles[y][x]) continue;
 
 			const tile = game.tiles[y][x];
-			let div = DocumentTimeline.createElement("div");
+			let div = document.createElement("div");
 			div.innerHTML = tile.value;
-			div.classList.add("tile");
+			div.classList.add("tile"); //в css прописать надо
 
 			div.setAttribute(
 				"style",
@@ -40,7 +43,20 @@ export default function start() {
 
 	window.addEventListener("keydown", (e) => {
 		if (e.code == "KeyA") {
-			game.moveLeft();
+			game.moveLeft("left");
+			render(game);
+		}
+
+		if (e.code == "KeyD") {
+			game.moveRight();
+			render(game);
+		}
+		if (e.code == "KeyW") {
+			game.moveUp();
+			render(game);
+		}
+		if (e.code == "KeyS") {
+			game.moveDown();
 			render(game);
 		}
 	});
